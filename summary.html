@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap">
+    <title>Frontend Mentor | Results summary component</title>
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+    }
+    body{
+           display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(241, 100%, 89%);
+    font-family: 'Hanken', sans-serif;
+    }
+    .wrapper{
+        display: flex;
+        max-width:650px;
+        width:100%;
+        background-color: hsl(0, 0%, 100%); 
+        border-radius:20px;
+        overflow:hidden;
+        flex-wrap:wrap;
+        box-shadow: 2px 5px 20px rgba(78, 33, 202, 0.445);
+        
+    }
+    .left-side, .right-side{
+        flex:1;
+    }
+    .left-side{
+      text-align: center;
+      color:hsl(0, 0%, 100%); 
+      background: linear-gradient(700deg, hsla(256, 72%, 46%, 1), hsl(252, 100%, 67%));
+      
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .left-side h2{
+        margin-bottom: 15px;
+    }
+    .left-side #score-text{
+        line-height: 25px;
+        opacity: 0.8;
+    }
+    .left-side h3, .score  b{
+        opacity: 0.8;
+    }
+    .circle{
+        width:150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color:hsla(256, 72%, 46%, 1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .circle #result{
+        font-size: 60px;
+        font-weight: 700;
+    }
+    .circle #range{
+        opacity: 0.5;
+    }
+    .right-side{
+         padding-inline: 30px;
+         padding-block: 40px;
+    }
+    .right-side h4{
+        color:hsl(224, 30%, 27%);
+    }
+    .summary{
+        display: flex;
+        justify-content: space-between;
+        border-radius: 15px;
+        margin-block: 15px;
+        width: 100%;
+        height: auto;
+        padding:15px; 
+    }
+    .summary .left{
+       display: flex;
+       align-items: center;
+       gap:10px;
+    }
+   
+    .summary span{
+        color:hsl(224, 30%, 27%);
+        font-weight: bold;
+        opacity: 0.5;
+    }
+    #summary-1{
+        background-color: hsla(0, 100%, 67%, 0.098);
+        color:hsl(0, 100%, 67%);
+       
+    }
+    #summary-2{
+        background-color: hsla(39, 100%, 56%, 0.158);
+        color:hsl(39, 100%, 56%);
+    }
+    #summary-3{
+        background-color: hsla(166, 100%, 37%, 0.13);
+        color:hsl(166, 100%, 37%)
+    }
+    #summary-4{
+        background-color: hsla(234, 85%, 45%, 0.151);
+        color:hsl(234, 85%, 45%);
+    }
+
+    .score{
+        color: #000;
+    }
+    
+    button{
+        width: 100%;
+        border:none;
+        background-color:hsl(224, 30%, 27%);
+        color: #fff;
+        text-align: center;
+        padding-block: 15px;
+        border-radius:30px;
+        margin-block: 15px;
+        
+    }
+    
+    @media (max-width: 690px) {
+    
+        .wrapper {
+        flex-direction: column; 
+    }
+    .left-side {
+        margin-top: 70px;
+        padding: 15px; 
+        gap: 20px; 
+        text-align: center; 
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        justify-content: space-between;
+    }
+        
+    
+    .right-side {
+        padding-inline: 20px; 
+        padding-block: 30px; 
+    }
+
+    .circle {
+        width: 120px;
+        height: 120px;
+    }
+
+    .circle #result {
+        font-size: 50px; 
+    }
+
+}
+@media (max-width:490px)
+{
+    .left-side {
+        margin-top: 70px;
+        padding: 15px;
+        
+    }
+}
+
+ 
+
+</style>
+</head>
+<body>
+    <main class="wrapper">
+        <div class="left-side">
+            <h3>Your Result</h3>
+            <div class="circle">
+                <p id="result">76</p>
+                <p id="range">of 100</p>
+            </div>
+            <div><h2>Great</h2>
+            <p id="score-text">You scored higher than 65% of the people who have taken these tests.</p></div>
+            
+
+        </div>
+        <div class="right-side">
+            
+           
+                <h4>Summary</h4>
+                <div class="summary" id="summary-1">
+                    <div class="left">
+                        <img src="./assests/icon-reaction.svg" alt="">
+                        <p><b>Reaction</b></p>
+                    </div>
+                    <div class="right">
+                        <p class="score"><b>80</b><span> / 100</span></p>
+
+                    </div>
+                </div>
+                <div class="summary" id="summary-2">
+                    <div class="left">
+                        <img src="./assests/icon-memory.svg" alt="">
+                        <p><b>Memory</b></p>
+                    </div>
+                    <div class="right">
+                        <p class="score"><b>92</b><span> / 100</span></p>
+                    </div>
+                        
+                </div>
+                <div class="summary" id="summary-3">
+                    <div class="left">
+                        <img src="./assests/icon-verbal.svg" alt="">
+                        <p><b>Verbal</b></p>
+                    </div>
+                    <div class="right">
+                          <p class="score"><b>61</b><span> / 100</span></p>
+                    </div>
+                        
+                        
+                </div>
+                <div class="summary" id="summary-4">
+                    <div class="left">
+                        
+                        <img src="./assests/icon-visual.svg" alt="">
+                        <p><b>Visual</b></p>
+                    </div>
+                        <div class="right">
+                       <p class="score"><b>73</b><span> / 100</span></p>
+
+                        </div>
+                </div>
+ <button>Continue</button>
+          
+           
+        </div>
+    </main>
+    
+</body>
+</html>
