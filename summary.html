@@ -14,6 +14,7 @@
     body{
            display: flex;
     justify-content: center; 
+    flex-direction: column;
     align-items: center;
     height: 100vh;
     background-color: hsl(241, 100%, 89%);
@@ -132,7 +133,12 @@
         margin-block: 15px;
         
     }
-    
+    .attribution { 
+        font-size: 11px; 
+        text-align: center; 
+        margin-top: 20px;
+    }
+    .attribution a { color: hsl(228, 45%, 44%); }
     @media (max-width: 690px) {
     
         .wrapper {
@@ -242,7 +248,11 @@
           
            
         </div>
+        
     </main>
-    
+    <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="https://www.frontendmentor.io/" target="_blank">Betelhem Sintayehu</a>.
+          </div>
 </body>
 </html>
